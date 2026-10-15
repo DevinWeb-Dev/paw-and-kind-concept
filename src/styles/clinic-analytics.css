@@ -1,0 +1,1368 @@
+/* ==========================================
+   PAW & KIND.
+   BATCH 4 — BUSINESS INTELLIGENCE
+   ========================================== */
+
+.pka-root {
+  --pka-green: #193a31;
+  --pka-paper: #fffcf7;
+  --pka-border: #d9e1d5;
+  --pka-muted: #788577;
+  --pka-coral: #dc8b70;
+
+  display: grid;
+  gap: 25px;
+
+  width: 100%;
+  min-width: 0;
+
+  color: #193a31;
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+.pka-root *,
+.pka-root *::before,
+.pka-root *::after {
+  box-sizing: border-box;
+}
+
+.pka-root button,
+.pka-root input,
+.pka-root select {
+  font: inherit;
+}
+
+.pka-root button {
+  cursor: pointer;
+}
+
+.pka-root button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.pka-root :focus-visible {
+  outline: 3px solid #dd9076;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   ANALYTICS NAVIGATION
+   ========================================== */
+
+.pka-subnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  padding-bottom: 18px;
+
+  border-bottom:
+    1px solid #d6dfd3;
+}
+
+.pka-subnav > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #56785d;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.pka-subnav > span svg {
+  color: #c88369;
+}
+
+.pka-subnav nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pka-tab {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 40px;
+  padding: 11px 14px;
+
+  border: 1px solid transparent;
+  border-radius: 50px;
+
+  color: #718171;
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.pka-tab:hover {
+  color: #193a31;
+  background: #e5ece1;
+}
+
+.pka-tab.is-active {
+  color: #fffaf0;
+  background: #193a31;
+}
+
+/* ==========================================
+   PAGE HEADINGS
+   ========================================== */
+
+.pka-page {
+  display: grid;
+  gap: 22px;
+  min-width: 0;
+}
+
+.pka-heading {
+  padding: 8px 0;
+}
+
+.pka-eyebrow {
+  display: block;
+
+  color: #b57e64;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+
+.pka-heading h1 {
+  margin: 15px 0 21px;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(
+    3.2rem,
+    5.7vw,
+    7rem
+  );
+
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.09em;
+}
+
+.pka-heading h1 em {
+  color: var(--pka-coral);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.pka-heading > p {
+  max-width: 675px;
+  margin: 0;
+
+  color: #718073;
+  font-size: 0.86rem;
+  line-height: 1.85;
+}
+
+/* ==========================================
+   METRICS
+   ========================================== */
+
+.pka-metric-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pka-metric {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 170px;
+
+  padding: 21px;
+
+  border: 1px solid var(--pka-border);
+  border-radius: 19px;
+  background: var(--pka-paper);
+}
+
+.pka-metric.is-featured {
+  border-color: #a9c6ad;
+  background: #e1ebdd;
+}
+
+.pka-metric-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pka-metric-top span {
+  color: #758775;
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+}
+
+.pka-metric-top svg {
+  color: var(--pka-coral);
+}
+
+.pka-metric > strong {
+  margin: 21px 0 10px;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(
+    2.6rem,
+    3.7vw,
+    4.4rem
+  );
+
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.09em;
+  overflow-wrap: anywhere;
+}
+
+.pka-metric > p {
+  margin: auto 0 0;
+
+  color: #819082;
+  font-size: 0.69rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   PANELS
+   ========================================== */
+
+.pka-two-columns,
+.pka-report-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  align-items: start;
+}
+
+.pka-report-grid {
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(0, 0.8fr);
+}
+
+.pka-panel {
+  min-width: 0;
+  padding: 24px;
+
+  border: 1px solid var(--pka-border);
+  border-radius: 21px;
+  background: var(--pka-paper);
+}
+
+.pka-panel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  margin-bottom: 24px;
+}
+
+.pka-panel-heading h2 {
+  margin: 9px 0 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    1.8rem,
+    2.7vw,
+    2.7rem
+  );
+
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.pka-small-label {
+  color: #8b978b;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.pka-helper {
+  margin: 17px 0 0;
+
+  color: #899689;
+  font-size: 0.69rem;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   COLUMN CHART
+   ========================================== */
+
+.pka-column-chart {
+  display: grid;
+  grid-auto-columns:
+    minmax(39px, 1fr);
+  grid-auto-flow: column;
+  gap: 9px;
+
+  min-height: 215px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.pka-column-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+
+  min-width: 39px;
+}
+
+.pka-column-stage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+
+  width: 100%;
+  height: 176px;
+  padding: 12px 3px 0;
+
+  border-bottom: 1px solid #a7bba9;
+  background: #f1f5ed;
+}
+
+.pka-column-stage > span {
+  flex: 1;
+  max-width: 24px;
+  min-width: 0;
+
+  transition:
+    height 0.3s ease;
+}
+
+.pka-column-stage .is-primary,
+.pka-legend .is-primary {
+  background: #397251;
+}
+
+.pka-column-stage .is-secondary,
+.pka-legend .is-secondary {
+  background: #e3a086;
+}
+
+.pka-column-day > strong {
+  color: #788978;
+  font-size: 0.58rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.pka-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  margin-top: 15px;
+}
+
+.pka-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #758474;
+  font-size: 0.7rem;
+}
+
+.pka-legend i {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+
+/* ==========================================
+   STATUS DISTRIBUTION
+   ========================================== */
+
+.pka-status-list {
+  display: grid;
+}
+
+.pka-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  min-height: 55px;
+  padding: 12px 0;
+
+  border-top: 1px solid #e0e6dc;
+}
+
+.pka-status-row > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #697b6a;
+  font-size: 0.77rem;
+}
+
+.pka-status-row i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.pka-status-row i.is-requested {
+  background: #caaa6a;
+}
+
+.pka-status-row i.is-confirmed {
+  background: #69aa7a;
+}
+
+.pka-status-row i.is-checked-in {
+  background: #78a9c4;
+}
+
+.pka-status-row i.is-completed {
+  background: #5a8877;
+}
+
+.pka-status-row i.is-cancelled {
+  background: #d88a80;
+}
+
+.pka-status-row > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pka-status-row strong {
+  font-size: 0.87rem;
+}
+
+.pka-status-row small {
+  width: 44px;
+  color: #98a297;
+  font-size: 0.67rem;
+  text-align: right;
+}
+
+.pka-summary-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  margin-top: 17px;
+  padding-top: 17px;
+  border-top: 1px solid #dbe3d7;
+}
+
+.pka-summary-line > span {
+  color: #788477;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.pka-summary-line strong {
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: 1.5rem;
+  letter-spacing: -0.06em;
+  text-align: right;
+}
+
+.pka-summary-line strong.is-text {
+  font-size: 0.81rem;
+  letter-spacing: normal;
+}
+
+/* ==========================================
+   HORIZONTAL PROGRESS BARS
+   ========================================== */
+
+.pka-progress-list {
+  display: grid;
+  gap: 23px;
+}
+
+.pka-progress-item {
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+}
+
+.pka-progress-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pka-progress-top > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.pka-progress-top > div span {
+  color: #c48a70;
+  font-size: 0.73rem;
+  font-weight: 900;
+}
+
+.pka-progress-top strong {
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.pka-progress-top b {
+  color: #427d52;
+  font-size: 0.83rem;
+  white-space: nowrap;
+}
+
+.pka-progress-track {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #e4e9df;
+}
+
+.pka-progress-track > span {
+  display: block;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    #6ea57c,
+    #275a3d
+  );
+}
+
+.pka-progress-item > small {
+  color: #849082;
+  font-size: 0.68rem;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   SERVICE INSIGHT CARDS
+   ========================================== */
+
+.pka-service-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pka-service-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  padding: 22px;
+
+  border: 1px solid #d7e1d4;
+  border-radius: 21px;
+
+  background: #fffcf7;
+}
+
+.pka-service-card:nth-child(even) {
+  background: #eaf0e6;
+}
+
+.pka-service-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.pka-service-head > span:first-child {
+  color: #8a9789;
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.pka-service-available,
+.pka-service-paused {
+  padding: 7px 10px;
+
+  border-radius: 30px;
+  background: #dcebdc;
+  color: #477a54;
+
+  font-size: 0.56rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.pka-service-paused {
+  background: #fae4dc;
+  color: #b16e58;
+}
+
+.pka-service-icon {
+  display: grid;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+
+  margin: 25px 0 19px;
+
+  border-radius: 50%;
+
+  background: #dfeade;
+  color: #658f6c;
+}
+
+.pka-service-card h3 {
+  margin: 0 0 12px;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 1.85rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.pka-service-card > p {
+  min-height: 50px;
+  margin-bottom: 24px;
+
+  color: #7d8879;
+  font-size: 0.76rem;
+  line-height: 1.75;
+}
+
+.pka-service-numbers {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 1px;
+
+  margin-top: auto;
+
+  background: #d3dfd1;
+  border: 1px solid #d3dfd1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pka-service-numbers > div {
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+
+  padding: 13px;
+  background: #f5f7f1;
+}
+
+.pka-service-numbers span {
+  color: #839284;
+  font-size: 0.54rem;
+  font-weight: 900;
+}
+
+.pka-service-numbers strong {
+  font-size: 1.5rem;
+}
+
+/* ==========================================
+   TEAM CARDS
+   ========================================== */
+
+.pka-team-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pka-team-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 23px;
+
+  border: 1px solid #d5dfd2;
+  border-radius: 21px;
+
+  background: linear-gradient(
+    145deg,
+    #e8efe5,
+    #fffcf7
+  );
+}
+
+.pka-team-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #a17b64;
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+}
+
+.pka-team-avatar {
+  display: grid;
+  place-items: center;
+
+  width: 76px;
+  height: 76px;
+  margin: 25px 0 20px;
+
+  border: 1px solid #9cba9a;
+  border-radius: 50%;
+
+  background: #dce8d8;
+  color: #356b47;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 2.1rem;
+  font-style: italic;
+}
+
+.pka-team-card h3 {
+  margin: 0 0 9px;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: 1.35rem;
+  letter-spacing: -0.06em;
+}
+
+.pka-team-card > p {
+  margin-bottom: 24px;
+
+  color: #889286;
+  font-size: 0.67rem;
+  font-weight: 900;
+  letter-spacing: 0.045em;
+}
+
+.pka-team-numbers {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 1px;
+
+  margin-top: auto;
+  overflow: hidden;
+  border-radius: 10px;
+
+  background: #d7dfd4;
+}
+
+.pka-team-numbers > div {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+
+  padding: 12px 10px;
+  background: #f7f9f4;
+}
+
+.pka-team-numbers span {
+  color: #849085;
+  font-size: 0.55rem;
+  font-weight: 900;
+}
+
+.pka-team-numbers strong {
+  font-size: 1.45rem;
+}
+
+/* ==========================================
+   ASSIGNMENT DESK
+   ========================================== */
+
+.pka-assignment-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+}
+
+.pka-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex: 1 1 220px;
+  min-height: 47px;
+  padding: 0 13px;
+
+  border: 1px solid #d0d9cc;
+  border-radius: 12px;
+
+  background: #f6f9f3;
+  color: #7b937d;
+}
+
+.pka-search input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+
+  outline: 0;
+  border: 0;
+  background: transparent;
+  color: #193a31;
+
+  font-size: 0.78rem;
+}
+
+.pka-assignment-controls > select,
+.pka-assignment-select select {
+  min-height: 47px;
+  padding: 11px 13px;
+
+  border: 1px solid #cbd8c9;
+  border-radius: 12px;
+
+  background: #f5f8f2;
+  color: #193a31;
+
+  font-size: 0.78rem;
+}
+
+.pka-assignment-list {
+  display: grid;
+  gap: 9px;
+}
+
+.pka-assignment-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  padding: 17px;
+
+  border: 1px solid #dbe3d8;
+  border-radius: 14px;
+
+  background: #f5f8f2;
+}
+
+.pka-assignment-identity {
+  display: grid;
+  gap: 7px;
+
+  flex: 1 1 210px;
+  min-width: 0;
+}
+
+.pka-assignment-identity > span {
+  color: #c1876e;
+  font-size: 0.64rem;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.pka-assignment-identity > strong {
+  font-size: 0.93rem;
+}
+
+.pka-assignment-identity > small {
+  color: #819080;
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.pka-assignment-select {
+  display: grid;
+  gap: 9px;
+
+  flex: 0 1 240px;
+  min-width: min(100%, 190px);
+}
+
+.pka-assignment-select > span {
+  color: #7e907f;
+  font-size: 0.63rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.pka-assignment-select select {
+  width: 100%;
+}
+
+/* ==========================================
+   REPORT CENTER
+   ========================================== */
+
+.pka-report-fields {
+  display: grid;
+  gap: 19px;
+}
+
+.pka-report-fields label {
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+}
+
+.pka-report-fields label > span {
+  color: #738774;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.pka-report-fields select,
+.pka-report-fields input {
+  display: block;
+
+  width: 100%;
+  min-height: 48px;
+  min-width: 0;
+  padding: 12px 14px;
+
+  border: 1px solid #cbd8c9;
+  border-radius: 12px;
+
+  background: #f5f8f2;
+  color: #193a31;
+
+  font-size: 0.8rem;
+}
+
+.pka-date-fields {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pka-report-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  margin-top: 25px;
+}
+
+.pka-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 47px;
+  padding: 12px 19px;
+
+  border: 1px solid #193a31;
+  border-radius: 50px;
+
+  background: #193a31;
+  color: #fffaf1;
+
+  font-size: 0.73rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.06em;
+}
+
+.pka-download-button:hover:not(:disabled) {
+  background: #35624a;
+}
+
+.pka-reset-button {
+  padding: 10px 0;
+
+  border: 0;
+  background: transparent;
+
+  color: #b07f67;
+  font-size: 0.73rem !important;
+  font-weight: 900 !important;
+}
+
+.pka-reset-button:hover {
+  text-decoration: underline;
+}
+
+.pka-report-count {
+  display: grid;
+  justify-items: start;
+  gap: 9px;
+}
+
+.pka-report-count svg {
+  color: #d89275;
+}
+
+.pka-report-count strong {
+  margin-top: 15px;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(
+    5rem,
+    8vw,
+    8rem
+  );
+
+  line-height: 0.93;
+  font-weight: 800;
+  letter-spacing: -0.1em;
+}
+
+.pka-report-count span {
+  color: #849384;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.pka-report-description {
+  margin: 25px 0 0;
+
+  color: #477455;
+  font-size: 0.89rem;
+  font-weight: 800;
+}
+
+.pka-error {
+  margin: 0;
+  color: #a8574b;
+
+  font-size: 0.73rem;
+  line-height: 1.7;
+}
+
+.pka-success {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: 17px 0 0;
+  color: #477f54;
+
+  font-size: 0.73rem;
+  line-height: 1.6;
+}
+
+.pka-table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.pka-table {
+  width: 100%;
+  min-width: 650px;
+
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.pka-table th {
+  padding: 15px;
+
+  border-bottom: 2px solid #c6d8c4;
+  background: #e9efe4;
+
+  color: #597460;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+
+.pka-table td {
+  padding: 15px;
+
+  border-bottom: 1px solid #e1e7dd;
+  color: #617261;
+
+  font-size: 0.73rem;
+  white-space: nowrap;
+}
+
+.pka-table tbody tr:hover {
+  background: #f0f4ec;
+}
+
+/* ==========================================
+   EMPTY STATES AND NOTICES
+   ========================================== */
+
+.pka-empty {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+
+  padding: 26px 0;
+}
+
+.pka-empty svg {
+  color: #d39379;
+}
+
+.pka-empty strong {
+  font-size: 0.87rem;
+}
+
+.pka-empty p {
+  max-width: 430px;
+  margin: 0;
+
+  color: #859185;
+  font-size: 0.75rem;
+  line-height: 1.75;
+}
+
+.pka-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  padding: 18px 20px;
+
+  border: 1px solid #ddcaba;
+  border-radius: 15px;
+
+  background: #f7e9df;
+}
+
+.pka-notice svg {
+  flex: none;
+  color: #b58167;
+}
+
+.pka-notice p {
+  margin: 0;
+
+  color: #7c6f62;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 1350px) {
+  .pka-metric-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .pka-service-grid,
+  .pka-team-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .pka-two-columns,
+  .pka-report-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .pka-root {
+    gap: 20px;
+  }
+
+  .pka-page {
+    gap: 17px;
+  }
+
+  .pka-heading h1 {
+    font-size: clamp(
+      3.1rem,
+      10vw,
+      5rem
+    );
+  }
+
+  .pka-panel {
+    padding: 17px;
+  }
+
+  .pka-subnav nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .pka-tab {
+    flex: none;
+  }
+
+  .pka-metric-grid {
+    gap: 9px;
+  }
+
+  .pka-metric {
+    min-height: 145px;
+    padding: 14px;
+  }
+
+  .pka-metric > strong {
+    font-size: clamp(
+      2.3rem,
+      6vw,
+      3.2rem
+    );
+  }
+
+  .pka-metric-top span {
+    font-size: 0.55rem;
+  }
+
+  .pka-metric > p {
+    font-size: 0.64rem;
+  }
+
+  .pka-service-grid,
+  .pka-team-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+
+  .pka-column-chart {
+    grid-auto-columns:
+      minmax(47px, 1fr);
+  }
+
+  .pka-assignment-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pka-assignment-select {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .pka-date-fields {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 390px) {
+  .pka-heading h1 {
+    font-size: 2.9rem;
+  }
+
+  .pka-metric {
+    padding: 11px;
+  }
+
+  .pka-metric > strong {
+    font-size: 2.1rem;
+  }
+
+  .pka-metric-top span {
+    font-size: 0.5rem;
+  }
+
+  .pka-progress-top strong {
+    font-size: 0.73rem;
+  }
+
+  .pka-report-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pka-download-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pka-root *,
+  .pka-root *::before,
+  .pka-root *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

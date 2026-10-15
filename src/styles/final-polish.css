@@ -1,0 +1,716 @@
+/* ========================================
+   PAW & KIND. — FINAL POLISH
+   BATCH 5
+   ======================================== */
+
+:root {
+  --pk5-green: #193a31;
+  --pk5-green-dark: #102d26;
+  --pk5-coral: #dd896e;
+  --pk5-cream: #f7f2e9;
+  --pk5-paper: #fffcf7;
+}
+
+/* GLOBAL REFINEMENTS */
+
+#main-content {
+  min-width: 0;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+.pk-app,
+.pkc-shell,
+.pkp-root {
+  max-width: 100%;
+}
+
+.pk-app img,
+.pkc-shell img,
+.pkp-root img {
+  max-width: 100%;
+}
+
+.pk-app button,
+.pkc-shell button,
+.pkp-root button {
+  touch-action: manipulation;
+}
+
+.pk-app a:focus-visible,
+.pkc-shell a:focus-visible,
+.pkp-root a:focus-visible,
+.pk-app button:focus-visible,
+.pkc-shell button:focus-visible,
+.pkp-root button:focus-visible {
+  outline: 3px solid #df926f;
+  outline-offset: 4px;
+}
+
+/* BACK TO TOP */
+
+.pk5-back-to-top {
+  position: fixed;
+  z-index: 110;
+  right: 20px;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+
+  width: 54px;
+  height: 54px;
+
+  border: 1px solid #a1bea4;
+  border-radius: 50%;
+
+  background: #193a31;
+  color: #fffaf2;
+
+  box-shadow:
+    0 12px 28px #112c224d;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.pk5-back-to-top:hover {
+  transform: translateY(-4px);
+  background: #306149;
+}
+
+.pk5-back-to-top span {
+  font-size: 0.51rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+/* ========================================
+   DEMO SETTINGS PAGE
+   ======================================== */
+
+.pk5-settings-page {
+  min-height: 80vh;
+  padding: 95px 0 120px;
+
+  background: var(--pk5-cream);
+  color: var(--pk5-green);
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+.pk5-settings-page *,
+.pk5-settings-page *::before,
+.pk5-settings-page *::after {
+  box-sizing: border-box;
+}
+
+.pk5-settings-heading {
+  max-width: 900px;
+  padding-bottom: 55px;
+}
+
+.pk5-settings-heading h1 {
+  margin: 24px 0 25px;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(
+    4.1rem,
+    7vw,
+    8rem
+  );
+
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.095em;
+}
+
+.pk5-settings-heading h1 em {
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  color: var(--pk5-coral);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.pk5-settings-heading > p {
+  max-width: 635px;
+
+  color: #6e7b6e;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.pk5-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 20px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid
+    var(--pk5-green);
+
+  font-size: 0.79rem;
+  font-weight: 900;
+
+  transition: gap 0.2s ease;
+}
+
+.pk5-back-link:hover {
+  gap: 16px;
+}
+
+/* DEMO MODE MESSAGE */
+
+.pk5-settings-intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+
+  padding: 28px;
+
+  border-radius:
+    21px 45px 21px 21px;
+
+  background: var(--pk5-green);
+  color: #fff9ef;
+}
+
+.pk5-settings-intro-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+
+  width: 55px;
+  height: 55px;
+
+  border: 1px solid #799c7b;
+  border-radius: 50%;
+
+  color: #f0b094;
+}
+
+.pk5-settings-intro strong {
+  display: block;
+
+  margin: 4px 0 9px;
+
+  color: #f1b39b;
+  font-size: 0.71rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.pk5-settings-intro p {
+  max-width: 780px;
+  margin: 0;
+
+  color: #d1e0d2;
+  font-size: 0.81rem;
+  line-height: 1.85;
+}
+
+/* SECTION HEADINGS */
+
+.pk5-settings-section-heading {
+  margin: 92px 0 35px;
+}
+
+.pk5-settings-section-heading h2 {
+  margin: 17px 0 0;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(
+    2.7rem,
+    5vw,
+    5.2rem
+  );
+
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.075em;
+}
+
+.pk5-settings-section-heading h2 em {
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-weight: 500;
+  color: #cf8a70;
+}
+
+/* MODULE CARDS */
+
+.pk5-module-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.pk5-module-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 350px;
+  padding: 25px;
+
+  border: 1px solid #d5dfd2;
+  border-radius: 21px;
+
+  background: #fffcf7;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pk5-module-card:nth-child(2) {
+  background: #e9efe5;
+}
+
+.pk5-module-card:nth-child(3) {
+  background: #f7e7dc;
+}
+
+.pk5-module-card:hover {
+  transform: translateY(-5px);
+  border-color: #9db9a1;
+}
+
+.pk5-module-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pk5-module-card-top > span {
+  color: #859283;
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.pk5-module-card-top > div {
+  display: grid;
+  place-items: center;
+
+  width: 53px;
+  height: 53px;
+
+  border-radius: 50%;
+  border: 1px solid #b6c9b5;
+
+  color: #54775a;
+}
+
+.pk5-module-card h3 {
+  margin: 31px 0 13px;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    1.6rem,
+    2.3vw,
+    2.3rem
+  );
+
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: -0.04em;
+}
+
+.pk5-module-card > p {
+  margin-bottom: 26px;
+
+  color: #778275;
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.pk5-module-stats {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+
+  margin-top: auto;
+  padding-top: 19px;
+
+  border-top: 1px solid #d4ded0;
+}
+
+.pk5-module-stats > div {
+  display: grid;
+  gap: 7px;
+}
+
+.pk5-module-stats strong {
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+.pk5-module-stats span {
+  color: #809082;
+  font-size: 0.57rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+}
+
+.pk5-reset-module {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  align-self: flex-start;
+  min-height: 43px;
+  margin-top: 25px;
+  padding: 12px 17px;
+
+  border: 1px solid #cda99b;
+  border-radius: 50px;
+
+  background: #fff7f0;
+  color: #ad6d5a;
+
+  font-size: 0.73rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.pk5-reset-module:hover {
+  background: #f6e1d7;
+}
+
+/* EXPORT AND RESET CARDS */
+
+.pk5-actions-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.pk5-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-height: 300px;
+  padding: 31px;
+
+  border: 1px solid #d3dfd1;
+  border-radius: 23px;
+
+  background: #e6eee3;
+}
+
+.pk5-action-card.is-danger {
+  border-color: #e4c6b6;
+  background: #f7e6dc;
+}
+
+.pk5-action-icon {
+  display: grid;
+  place-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid #b2c9b0;
+  border-radius: 50%;
+  color: #4c805a;
+}
+
+.pk5-action-card.is-danger
+.pk5-action-icon {
+  border-color: #d8aa99;
+  color: #b16c59;
+}
+
+.pk5-action-card h3 {
+  margin: 25px 0 13px;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    1.65rem,
+    2.6vw,
+    2.6rem
+  );
+
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.pk5-action-card > p {
+  max-width: 470px;
+  margin-bottom: 25px;
+
+  color: #788575;
+  font-size: 0.83rem;
+  line-height: 1.85;
+}
+
+.pk5-action-card .pk-button,
+.pk5-danger-button {
+  margin-top: auto;
+}
+
+.pk5-danger-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 53px;
+  padding: 14px 20px;
+
+  border: 1px solid #a85d50;
+  border-radius: 50px;
+
+  background: #ae6454;
+  color: #fffaf4;
+
+  font-size: 0.8rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.pk5-danger-button:hover {
+  background: #8e493e;
+}
+
+/* FEEDBACK AND PRIVACY */
+
+.pk5-settings-message {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  margin: 24px 0 0;
+  padding: 16px;
+
+  border-radius: 12px;
+  background: #e1efdf;
+  color: #477a56;
+
+  font-size: 0.81rem;
+  line-height: 1.6;
+}
+
+.pk5-settings-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  margin-top: 30px;
+  padding: 23px;
+
+  border: 1px solid #e0c8b7;
+  border-radius: 17px;
+
+  background: #faeae0;
+}
+
+.pk5-settings-warning > svg {
+  flex: none;
+  color: #ba7a60;
+}
+
+.pk5-settings-warning strong {
+  display: block;
+
+  margin-bottom: 9px;
+  color: #8f5947;
+
+  font-size: 0.85rem;
+}
+
+.pk5-settings-warning p {
+  margin: 0;
+
+  color: #866d5e;
+  font-size: 0.76rem;
+  line-height: 1.8;
+}
+
+/* ========================================
+   RESPONSIVE REFINEMENT
+   ======================================== */
+
+@media (max-width: 1100px) {
+  .pk5-module-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .pk5-module-grid,
+  .pk5-actions-grid {
+    grid-template-columns:
+      minmax(0, 1fr);
+  }
+
+  .pk5-module-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pk5-settings-page {
+    padding: 65px 0 85px;
+  }
+
+  .pk5-settings-heading {
+    padding-bottom: 35px;
+  }
+
+  .pk5-settings-heading h1 {
+    font-size: clamp(
+      3.2rem,
+      11vw,
+      5rem
+    );
+  }
+
+  .pk5-settings-intro {
+    padding: 19px;
+    gap: 12px;
+  }
+
+  .pk5-settings-intro-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .pk5-settings-section-heading {
+    margin: 65px 0 27px;
+  }
+
+  .pk5-settings-section-heading h2 {
+    font-size: clamp(
+      2.7rem,
+      9vw,
+      4rem
+    );
+  }
+
+  .pk5-module-card,
+  .pk5-action-card {
+    padding: 22px;
+  }
+
+  .pk5-action-card {
+    min-height: 280px;
+  }
+
+  .pk5-back-to-top {
+    right: 11px;
+    bottom: 11px;
+
+    width: 46px;
+    height: 46px;
+  }
+
+  .pk5-back-to-top span {
+    font-size: 0.45rem;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY AND PRINT
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .pk5-module-card,
+  .pk5-back-to-top,
+  .pk5-back-link {
+    transition: none;
+  }
+}
+
+@media print {
+  .pk-header,
+  .pk-footer,
+  .pkc-sidebar,
+  .pkc-topbar,
+  .pk5-back-to-top,
+  .pkc-public-shortcut,
+  .pk5-reset-module,
+  .pk5-danger-button {
+    display: none !important;
+  }
+
+  body,
+  .pk-app,
+  .pkc-shell,
+  .pkp-root {
+    background: white !important;
+    color: black !important;
+  }
+
+  .pkc-shell {
+    display: block;
+  }
+
+  .pkc-main {
+    width: 100%;
+    padding: 0;
+  }
+
+  .pk5-module-card,
+  .pk5-action-card {
+    break-inside: avoid;
+  }
+}

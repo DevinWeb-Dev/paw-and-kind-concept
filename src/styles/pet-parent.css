@@ -1,0 +1,1300 @@
+/* ==========================================
+   PAW & KIND.
+   BATCH 2 — PET PARENT EXPERIENCE
+   ========================================== */
+
+.pkp-root {
+  --pkp-green: #193a31;
+  --pkp-dark: #102d26;
+  --pkp-coral: #dc896e;
+  --pkp-cream: #f7f2e9;
+  --pkp-paper: #fffcf7;
+  --pkp-sage: #e5ece0;
+  --pkp-border: #d8dfd3;
+  --pkp-muted: #6f7b70;
+
+  min-width: 0;
+  padding-bottom: 85px;
+
+  background: #f7f2e9;
+  color: var(--pkp-green);
+}
+
+.pkp-root *,
+.pkp-root *::before,
+.pkp-root *::after {
+  box-sizing: border-box;
+}
+
+.pkp-root button,
+.pkp-root input,
+.pkp-root select,
+.pkp-root textarea {
+  font: inherit;
+}
+
+.pkp-root button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pkp-root :focus-visible {
+  outline: 3px solid #de9073;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   COVER
+   ========================================== */
+
+.pkp-cover {
+  position: relative;
+  overflow: hidden;
+
+  padding: 88px 0;
+
+  background:
+    radial-gradient(
+      circle at 84% 38%,
+      #426f5866,
+      transparent 35%
+    ),
+    #193a31;
+
+  color: #fffaf1;
+}
+
+.pkp-cover-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.pkp-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #bf866b;
+  font-size: 0.67rem;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.pkp-cover .pkp-eyebrow {
+  color: #f1ae91;
+}
+
+.pkp-cover h1 {
+  margin: 23px 0;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(
+    4.2rem,
+    7vw,
+    8.5rem
+  );
+
+  font-weight: 800;
+  letter-spacing: -0.1em;
+  line-height: 0.92;
+}
+
+.pkp-cover h1 em {
+  color: #f2b49a;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.pkp-cover p {
+  max-width: 520px;
+  margin: 0;
+
+  color: #dae6d9;
+  font-size: 0.94rem;
+  line-height: 1.85;
+}
+
+.pkp-cover-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 19px;
+  flex: none;
+
+  width: clamp(180px, 25vw, 320px);
+  height: clamp(180px, 25vw, 320px);
+
+  border: 1px solid #91b39a80;
+  border-radius: 50%;
+
+  color: #f3b49c;
+
+  transform: rotate(-10deg);
+}
+
+.pkp-cover-mark span {
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.16em;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   PET PARENT NAVIGATION
+   ========================================== */
+
+.pkp-navigation-wrap {
+  position: relative;
+
+  background: #fffcf7;
+  border-bottom: 1px solid #d8dfd3;
+}
+
+.pkp-navigation {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 12px 0;
+  overflow-x: auto;
+}
+
+.pkp-nav-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex: none;
+
+  min-height: 44px;
+  padding: 11px 16px;
+
+  border-radius: 50px;
+
+  color: #718071;
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.pkp-nav-item:hover {
+  background: #edf2e9;
+  color: #193a31;
+}
+
+.pkp-nav-item.is-active {
+  background: #193a31;
+  color: #fffaf3;
+}
+
+.pkp-nav-badge {
+  display: grid;
+  place-items: center;
+
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+
+  border-radius: 30px;
+  background: #edaf95;
+  color: #17362d;
+
+  font-size: 0.63rem;
+}
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+
+.pkp-content {
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+.pkp-status-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  padding: 12px 0 25px;
+
+  border-bottom: 1px solid #d6ddd1;
+}
+
+.pkp-status-strip > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #788677;
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+}
+
+.pkp-status-strip svg {
+  color: #a27f69;
+}
+
+.pkp-page {
+  display: grid;
+  gap: 25px;
+
+  min-width: 0;
+  padding: 45px 0;
+}
+
+.pkp-page-heading {
+  padding-bottom: 7px;
+}
+
+.pkp-page-heading h2 {
+  margin: 17px 0 20px;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(
+    3.4rem,
+    5.9vw,
+    7rem
+  );
+
+  font-weight: 800;
+  line-height: 0.93;
+  letter-spacing: -0.09em;
+}
+
+.pkp-page-heading h2 em {
+  color: #d98b70;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.pkp-page-heading p {
+  max-width: 640px;
+  margin: 0;
+
+  color: #718072;
+  font-size: 0.88rem;
+  line-height: 1.85;
+}
+
+/* ==========================================
+   DASHBOARD STATS
+   ========================================== */
+
+.pkp-stats {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.pkp-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-height: 180px;
+  padding: 24px;
+
+  border: 1px solid var(--pkp-border);
+  border-radius: 19px;
+
+  background: var(--pkp-paper);
+}
+
+.pkp-stat.is-featured {
+  background: var(--pkp-sage);
+}
+
+.pkp-stat > span {
+  color: #718273;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.pkp-stat strong {
+  margin: 20px 0 10px;
+
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: 4.4rem;
+  font-weight: 800;
+  letter-spacing: -0.09em;
+  line-height: 0.9;
+}
+
+.pkp-stat > svg {
+  align-self: flex-end;
+
+  color: #d98b70;
+}
+
+/* ==========================================
+   DASHBOARD FEATURE
+   ========================================== */
+
+.pkp-dashboard-feature {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+
+  overflow: hidden;
+  min-height: 425px;
+
+  border-radius: 28px 90px 28px 28px;
+  background: var(--pkp-green);
+}
+
+.pkp-dashboard-feature > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: clamp(30px, 5vw, 70px);
+}
+
+.pkp-dashboard-feature .pkp-eyebrow {
+  color: #f0b198;
+}
+
+.pkp-dashboard-feature h3 {
+  margin: 18px 0;
+
+  color: #fff9ee;
+  font-family:
+    "Manrope",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(
+    3rem,
+    5vw,
+    6rem
+  );
+
+  line-height: 0.95;
+  letter-spacing: -0.09em;
+}
+
+.pkp-dashboard-feature h3 em {
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  color: #f1b398;
+  font-weight: 500;
+}
+
+.pkp-dashboard-feature p {
+  max-width: 450px;
+
+  margin-bottom: 25px;
+
+  color: #d8e4d9;
+  font-size: 0.83rem;
+  line-height: 1.85;
+}
+
+.pkp-dashboard-feature-image {
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.pkp-dashboard-feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================
+   PANELS
+   ========================================== */
+
+.pkp-dashboard-columns,
+.pkp-content-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: start;
+  gap: 17px;
+}
+
+.pkp-panel {
+  min-width: 0;
+
+  padding: 27px;
+
+  border: 1px solid var(--pkp-border);
+  border-radius: 22px;
+  background: var(--pkp-paper);
+}
+
+.pkp-panel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  margin-bottom: 24px;
+}
+
+.pkp-panel-heading h3 {
+  margin: 8px 0 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(
+    1.8rem,
+    2.8vw,
+    2.8rem
+  );
+
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.pkp-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #315e45;
+  font-size: 0.73rem;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.pkp-text-link:hover {
+  color: #be7961;
+}
+
+/* ==========================================
+   MINI PETS & REMINDER PREVIEW
+   ========================================== */
+
+.pkp-mini-pet-list,
+.pkp-small-list {
+  display: grid;
+}
+
+.pkp-mini-pet,
+.pkp-small-list-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-width: 0;
+  padding: 16px 0;
+
+  border-top: 1px solid #e1e6dc;
+}
+
+.pkp-mini-avatar,
+.pkp-list-symbol {
+  display: grid;
+  place-items: center;
+  flex: none;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 50%;
+  background: #e2ebdf;
+  color: #587e60;
+}
+
+.pkp-mini-pet > div:nth-child(2),
+.pkp-small-list-item > div:nth-child(2) {
+  display: grid;
+  gap: 6px;
+  flex: 1;
+
+  min-width: 0;
+}
+
+.pkp-mini-pet strong,
+.pkp-small-list-item strong {
+  font-size: 0.82rem;
+  overflow-wrap: anywhere;
+}
+
+.pkp-mini-pet span,
+.pkp-small-list-item span {
+  color: #819082;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.pkp-mini-pet > svg {
+  color: #dc9a81;
+}
+
+.pkp-small-list-item > small {
+  color: #b2765c;
+  font-size: 0.59rem;
+  font-weight: 900;
+}
+
+/* ==========================================
+   JOURNAL PREVIEW
+   ========================================== */
+
+.pkp-journal-preview {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.pkp-journal-preview > div {
+  display: grid;
+  gap: 10px;
+
+  padding: 20px;
+
+  border: 1px solid #d8e0d4;
+  border-radius: 16px;
+  background: #f2f5ef;
+}
+
+.pkp-journal-preview small {
+  color: #ac7d65;
+  font-size: 0.64rem;
+  font-weight: 900;
+}
+
+.pkp-journal-preview strong {
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.pkp-journal-preview span {
+  color: #718273;
+  font-size: 0.69rem;
+}
+
+/* ==========================================
+   FORMS
+   ========================================== */
+
+.pkp-form {
+  display: grid;
+  gap: 19px;
+}
+
+.pkp-form label {
+  display: grid;
+  gap: 9px;
+  min-width: 0;
+}
+
+.pkp-form label > span {
+  color: #65806b;
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+}
+
+.pkp-form input,
+.pkp-form select,
+.pkp-form textarea,
+.pkp-filter-row select {
+  width: 100%;
+  min-width: 0;
+  min-height: 49px;
+  padding: 12px 14px;
+
+  border: 1px solid #cbd8c9;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #f8faf6;
+  color: #193a31;
+  font-size: 0.83rem;
+}
+
+.pkp-form textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.pkp-form input:focus,
+.pkp-form select:focus,
+.pkp-form textarea:focus,
+.pkp-filter-row select:focus {
+  border-color: #6d987b;
+  box-shadow: 0 0 0 3px #85a78d24;
+}
+
+.pkp-form input::placeholder,
+.pkp-form textarea::placeholder {
+  color: #a0a99d;
+}
+
+.pkp-form > .pk-button {
+  justify-self: start;
+}
+
+.pkp-quiet-button {
+  justify-self: start;
+
+  border: 0;
+  background: transparent;
+  color: #a46954;
+
+  font-size: 0.76rem !important;
+  font-weight: 900 !important;
+  text-decoration: underline;
+}
+
+/* ==========================================
+   FEEDBACK
+   ========================================== */
+
+.pkp-feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #b4d1ba;
+  border-radius: 11px;
+
+  background: #e5f2e4;
+  color: #437a54;
+
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.pkp-feedback.is-error {
+  background: #ffece6;
+  border-color: #dfb3a3;
+  color: #9c584a;
+}
+
+.pkp-feedback > span {
+  font-weight: 900;
+}
+
+/* ==========================================
+   PET PROFILE CARDS
+   ========================================== */
+
+.pkp-profile-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(270px, 0.75fr)
+    minmax(0, 1.25fr);
+
+  gap: 18px;
+  align-items: start;
+}
+
+.pkp-profile-results {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pkp-pet-card {
+  min-width: 0;
+  overflow: hidden;
+
+  border: 1px solid #d8dfd3;
+  border-radius: 20px;
+  background: #fffcf7;
+}
+
+.pkp-pet-photo {
+  display: grid;
+  place-items: center;
+  height: 210px;
+
+  background: #e3ebe0;
+  color: #6e9475;
+}
+
+.pkp-pet-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pkp-pet-card-content {
+  padding: 23px;
+}
+
+.pkp-pet-card h3 {
+  margin: 11px 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 2.3rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.pkp-pet-card-content > p {
+  color: #7b887b;
+  font-size: 0.79rem;
+}
+
+.pkp-favorite {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  padding: 13px;
+
+  border-radius: 12px;
+  background: #f8e8de;
+
+  color: #9d735f;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.pkp-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  margin-top: 23px;
+  padding-top: 15px;
+
+  border-top: 1px solid #e4e6dd;
+}
+
+.pkp-card-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 0;
+  border: 0;
+
+  background: transparent;
+  color: #466f54;
+
+  font-size: 0.73rem;
+  font-weight: 900;
+}
+
+.pkp-card-actions button.is-danger {
+  color: #b26c5c;
+}
+
+.pkp-card-actions button:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   EMPTY STATES
+   ========================================== */
+
+.pkp-empty {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 28px 4px;
+}
+
+.pkp-empty-icon {
+  display: grid;
+  place-items: center;
+
+  width: 63px;
+  height: 63px;
+
+  margin-bottom: 5px;
+  border-radius: 50%;
+
+  background: #e4eee1;
+  color: #6a9975;
+}
+
+.pkp-empty h3 {
+  margin: 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.pkp-empty p {
+  max-width: 365px;
+  margin: 0;
+
+  color: #738074;
+  font-size: 0.79rem;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   JOURNAL RECORDS
+   ========================================== */
+
+.pkp-filter-row {
+  margin-bottom: 20px;
+}
+
+.pkp-record-list {
+  display: grid;
+  gap: 13px;
+}
+
+.pkp-record {
+  padding: 20px;
+
+  border: 1px solid #d8e1d4;
+  border-radius: 17px;
+  background: #f3f6f0;
+}
+
+.pkp-record-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pkp-record-heading > span {
+  color: #b17f65;
+  font-size: 0.69rem;
+  font-weight: 900;
+}
+
+.pkp-record-heading button,
+.pkp-reminder-delete {
+  display: grid;
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #ab7665;
+}
+
+.pkp-record-heading button:hover,
+.pkp-reminder-delete:hover {
+  background: #f5dfd7;
+  color: #924f43;
+}
+
+.pkp-record h4 {
+  margin: 11px 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 1.65rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.pkp-record-category {
+  color: #66816b;
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+.pkp-record-note {
+  margin: 17px 0 0;
+  padding-top: 13px;
+
+  border-top: 1px solid #d4dfd3;
+
+  color: #788174;
+  font-size: 0.78rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   REMINDER BOARD
+   ========================================== */
+
+.pkp-tab-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+}
+
+.pkp-tab-row button {
+  min-height: 40px;
+  padding: 10px 15px;
+
+  border: 1px solid #c7d3c3;
+  border-radius: 50px;
+  background: transparent;
+
+  color: #718272;
+  font-size: 0.73rem;
+  font-weight: 900;
+}
+
+.pkp-tab-row button.is-active {
+  border-color: #193a31;
+  background: #193a31;
+  color: #fff;
+}
+
+.pkp-reminder-list {
+  display: grid;
+  gap: 9px;
+}
+
+.pkp-reminder {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  padding: 16px;
+
+  border: 1px solid #d8e2d4;
+  border-radius: 15px;
+  background: #f5f7f2;
+}
+
+.pkp-reminder.is-completed {
+  background: #e9f0e7;
+}
+
+.pkp-reminder-check {
+  display: grid;
+  place-items: center;
+  flex: none;
+
+  width: 27px;
+  height: 27px;
+
+  border: 1px solid #8aad91;
+  border-radius: 8px;
+
+  background: #fff;
+  color: #fff;
+}
+
+.pkp-reminder.is-completed .pkp-reminder-check {
+  background: #4d8760;
+  border-color: #4d8760;
+}
+
+.pkp-reminder-check > span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: #a9c3ab;
+}
+
+.pkp-reminder > div {
+  display: grid;
+  gap: 7px;
+  flex: 1;
+
+  min-width: 0;
+}
+
+.pkp-reminder strong {
+  font-size: 0.84rem;
+  overflow-wrap: anywhere;
+}
+
+.pkp-reminder.is-completed strong {
+  text-decoration: line-through;
+  color: #849083;
+}
+
+.pkp-reminder div > span {
+  color: #738573;
+  font-size: 0.71rem;
+}
+
+.pkp-reminder small {
+  color: #99785f;
+  font-size: 0.69rem;
+}
+
+.pkp-reminder small.is-overdue {
+  color: #b4564d;
+  font-weight: 900;
+}
+
+/* ==========================================
+   DISCLAIMER
+   ========================================== */
+
+.pkp-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  padding: 19px 22px;
+
+  border: 1px solid #ddc8b9;
+  border-radius: 15px;
+
+  background: #f4e6dc;
+}
+
+.pkp-disclaimer > svg {
+  flex: none;
+  color: #ac725b;
+}
+
+.pkp-disclaimer p {
+  margin: 0;
+
+  color: #826d60;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 1120px) {
+  .pkp-profile-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pkp-profile-results {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 950px) {
+  .pkp-dashboard-columns,
+  .pkp-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pkp-dashboard-feature {
+    grid-template-columns:
+      1fr 0.8fr;
+  }
+
+  .pkp-cover-mark {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pkp-cover {
+    padding: 66px 0;
+  }
+
+  .pkp-cover h1 {
+    font-size: clamp(
+      3.8rem,
+      12vw,
+      5.6rem
+    );
+  }
+
+  .pkp-cover-mark {
+    display: none;
+  }
+
+  .pkp-navigation {
+    padding: 9px 0;
+  }
+
+  .pkp-nav-item {
+    min-height: 43px;
+    padding: 10px 13px;
+    font-size: 0.71rem;
+  }
+
+  .pkp-content {
+    padding-top: 15px;
+  }
+
+  .pkp-page {
+    padding: 32px 0;
+    gap: 19px;
+  }
+
+  .pkp-page-heading h2 {
+    font-size: clamp(
+      3.2rem,
+      10vw,
+      5rem
+    );
+  }
+
+  .pkp-stats {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .pkp-stat {
+    min-height: 130px;
+    padding: 13px;
+    border-radius: 13px;
+  }
+
+  .pkp-stat > span {
+    font-size: 0.54rem;
+    line-height: 1.5;
+  }
+
+  .pkp-stat strong {
+    font-size: 3rem;
+    margin-top: 13px;
+  }
+
+  .pkp-stat > svg {
+    width: 17px;
+  }
+
+  .pkp-dashboard-feature {
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: 23px 55px 23px 23px;
+  }
+
+  .pkp-dashboard-feature > div:first-child {
+    padding: 42px 25px;
+  }
+
+  .pkp-dashboard-feature h3 {
+    font-size: clamp(
+      3.2rem,
+      10vw,
+      4.9rem
+    );
+  }
+
+  .pkp-dashboard-feature-image {
+    min-height: 0;
+    height: 270px;
+  }
+
+  .pkp-panel {
+    padding: 19px;
+    border-radius: 16px;
+  }
+
+  .pkp-journal-preview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pkp-profile-results {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pkp-pet-photo {
+    height: 240px;
+  }
+
+  .pkp-disclaimer {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .pkp-stat {
+    padding: 10px;
+  }
+
+  .pkp-stat strong {
+    font-size: 2.5rem;
+  }
+
+  .pkp-stat > span {
+    font-size: 0.49rem;
+  }
+
+  .pkp-cover h1 {
+    font-size: 3.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pkp-root *,
+  .pkp-root *::before,
+  .pkp-root *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
