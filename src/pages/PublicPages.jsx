@@ -221,121 +221,259 @@ function BottomCTA() {
 // HOME PAGE
 // ======================================
 
+
 export function HomePage() {
+  const [careMode, setCareMode] = useState("wellness");
+
+  const careModes = [
+    {
+      id: "wellness",
+      label: "Wellness",
+      number: "01",
+      icon: HeartPulse,
+      headline: "A little more peace of mind.",
+      description:
+        "Kind, attentive wellness conversations with a veterinary professional.",
+      image: IMAGES.dog,
+      category: "VET-LED WELLNESS",
+    },
+    {
+      id: "grooming",
+      label: "Grooming",
+      number: "02",
+      icon: Scissors,
+      headline: "A softer kind of fresh.",
+      description:
+        "Comfort-led grooming that treats each little personality as their own.",
+      image: IMAGES.secondary,
+      category: "GENTLE GROOMING",
+    },
+    {
+      id: "vaccination",
+      label: "Prevention",
+      number: "03",
+      icon: ShieldCheck,
+      headline: "Little steps, lasting care.",
+      description:
+        "Explore a sample preventive-care pathway and discuss the right timing with a veterinarian.",
+      image: IMAGES.puppy,
+      category: "PREVENTIVE CARE",
+    },
+  ];
+
+  const activeCare =
+    careModes.find((item) => item.id === careMode) ||
+    careModes[0];
+
+  const ActiveIcon = activeCare.icon;
+
   return (
     <>
-      <section className="pk-hero">
-        <div className="pk-container pk-hero-grid">
-          <div className="pk-hero-copy">
-            <SectionLabel>
-              FOR THE ONES WHO FEEL LIKE FAMILY
-            </SectionLabel>
+      <section className="pk6-hero">
+        <div className="pk-container pk6-hero-shell">
+          <div className="pk6-hero-copy">
+            <span className="pk6-eyebrow">
+              <span className="pk6-pulse" />
+              THOUGHTFUL PET WELLNESS, REIMAGINED
+            </span>
 
             <h1>
-              A SOFTER
+              BIG LOVE.
               <br />
-              WAY TO
+              <span>LITTLE</span>
               <br />
-              <em>CARE.</em>
+              <em>PAWS.</em>
             </h1>
 
             <p>
-              Thoughtful pet wellness,
-              gentle experiences, and
-              plenty of heart. Because
-              caring for your companion
-              should feel as special as
-              they are.
+              Where every wag, whisker and little
+              heartbeat feels right at home.
+              A kinder concept for veterinary
+              care and everyday grooming.
             </p>
 
-            <div className="pk-hero-actions">
-              <Link
-                to="/request"
-                className="pk-button pk-button-dark"
-              >
-                Request a Visit
+            <div className="pk6-hero-actions">
+              <Link to="/request" className="pk6-cta">
+                Request a demo visit
                 <ArrowUpRight size={19} />
               </Link>
 
               <Link
                 to="/services"
-                className="pk-button pk-button-outline"
+                className="pk6-text-button"
               >
-                Explore Our Care
+                Explore care
                 <ArrowRight size={19} />
               </Link>
             </div>
 
-            <div className="pk-hero-proof">
-              <div className="pk-proof-symbol">
-                <Heart
-                  size={21}
-                  fill="currentColor"
-                />
-              </div>
+            <div className="pk6-micro-trust">
+              <span>
+                <CheckCircle2 size={16} />
+                Calm-first experiences
+              </span>
 
-              <div>
-                <strong>
-                  CALM CARE, FIRST.
-                </strong>
-
-                <span>
-                  Pet-first thinking in
-                  every detail.
-                </span>
-              </div>
+              <span>
+                <Heart size={16} />
+                Made for every little personality
+              </span>
             </div>
           </div>
 
-          <div className="pk-hero-media">
-            <div className="pk-hero-image">
+          <div className="pk6-hero-art">
+            <div className="pk6-aura" aria-hidden="true" />
+
+            <div className="pk6-main-arch">
               <img
                 src={IMAGES.hero}
-                alt="Friendly golden retriever looking toward the camera"
+                alt="Golden retriever in a pet-care studio"
                 fetchPriority="high"
               />
             </div>
 
-            <div className="pk-hero-side-label">
-              EVERY LITTLE HEART MATTERS
-            </div>
-
-            <div className="pk-hero-round-stamp">
-              <PawPrint size={26} />
-
-              <span>
-                ALWAYS
-                <br />
-                WITH LOVE
-              </span>
-            </div>
-
-            <div className="pk-hero-cat">
+            <div className="pk6-cat-orbit">
               <img
                 src={IMAGES.secondary}
                 alt="Relaxed cat"
                 loading="lazy"
               />
-
-              <span>
-                FOR THE
-                <br />
-                LITTLE ONES.
-              </span>
             </div>
+
+            <div className="pk6-float-note">
+              <PawPrint size={18} />
+              <strong>
+                EVERY PAW
+                <br />
+                IS FAMILY.
+              </strong>
+            </div>
+
+            <div
+              className="pk6-rotation-seal"
+              aria-hidden="true"
+            >
+              <span>
+                PAW & KIND • CARE IN BLOOM •
+              </span>
+              <Heart size={23} />
+            </div>
+
+            <div
+              className="pk6-speck pk6-speck-one"
+              aria-hidden="true"
+            />
+            <div
+              className="pk6-speck pk6-speck-two"
+              aria-hidden="true"
+            />
           </div>
         </div>
 
-        <div className="pk-hero-bottom">
-          <div className="pk-container pk-hero-bottom-inner">
-            <span>
-              MADE FOR PETS. MADE WITH HEART.
+        <div className="pk6-wave" aria-hidden="true">
+          <svg
+            viewBox="0 0 1440 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0 35C244 105 406 4 678 47S1143 108 1440 24V100H0Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <section
+        className="pk6-care-playground"
+        aria-labelledby="pk6-care-title"
+      >
+        <div className="pk-container pk6-playground-shell">
+          <div className="pk6-care-title">
+            <span className="pk6-eyebrow">
+              THE LITTLE THINGS MAKE THE DIFFERENCE
             </span>
 
-            <div>
-              DISCOVER OUR APPROACH
-              <ArrowDownRight size={21} />
+            <h2 id="pk6-care-title">
+              Care that <em>fits.</em>
+            </h2>
+
+            <p>
+              Choose a care pathway to explore.
+              Each option connects to the existing
+              demo appointment flow.
+            </p>
+          </div>
+
+          <div className="pk6-care-layout">
+            <div
+              className="pk6-care-tabs"
+              role="group"
+              aria-label="Explore care pathways"
+            >
+              {careModes.map((item) => {
+                const Icon = item.icon;
+
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    aria-pressed={careMode === item.id}
+                    onClick={() => setCareMode(item.id)}
+                    className={
+                      careMode === item.id
+                        ? "pk6-care-tab is-active"
+                        : "pk6-care-tab"
+                    }
+                  >
+                    <span>{item.number}</span>
+                    <Icon size={21} />
+                    <strong>{item.label}</strong>
+                    <ArrowUpRight size={18} />
+                  </button>
+                );
+              })}
+
+              <div className="pk6-tab-footer">
+                <Sparkles size={18} />
+                Care with a little more heart.
+              </div>
             </div>
+
+            <article
+              className="pk6-care-feature"
+              key={activeCare.id}
+            >
+              <div className="pk6-care-feature-copy">
+                <span className="pk6-feature-kicker">
+                  <ActiveIcon size={17} />
+                  {activeCare.category}
+                </span>
+
+                <h3>{activeCare.headline}</h3>
+                <p>{activeCare.description}</p>
+
+                <Link
+                  to={
+                    "/request?service=" +
+                    activeCare.id
+                  }
+                  className="pk6-feature-link"
+                >
+                  Explore this care
+                  <ArrowUpRight size={19} />
+                </Link>
+              </div>
+
+              <div className="pk6-care-feature-image">
+                <img
+                  src={activeCare.image}
+                  alt={
+                    activeCare.label +
+                    " sample care photography"
+                  }
+                  loading="lazy"
+                />
+              </div>
+            </article>
           </div>
         </div>
       </section>
